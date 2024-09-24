@@ -90,7 +90,7 @@ export default function Home() {
           +
         </button>
       </div>
-      <CreateModal currentDirectory={currentDirectory} setCurrentDirectory={setCurrentDirectory} />
+      <CreateModal currentDirectory={currentDirectory} setCurrentDirectory={setCurrentDirectory} setDirectories={setDirectories} />
     </>
   );
 }

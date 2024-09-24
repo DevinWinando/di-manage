@@ -1,6 +1,6 @@
-import { create, show } from "../services/directories";
+import { create, show, list } from "../services/directories";
 
-export default function CreateModal({ currentDirectory, setCurrentDirectory }) {
+export default function CreateModal({ currentDirectory, setCurrentDirectory, setDirectories }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -14,6 +14,10 @@ export default function CreateModal({ currentDirectory, setCurrentDirectory }) {
         alert("Folder created successfully");
         document.getElementById("create").close();
         e.target.reset();
+
+        list().then((res) => {
+          setDirectories(res.results.data);
+        });
       }
 
       show(currentDirectory?.id).then((res) => {
