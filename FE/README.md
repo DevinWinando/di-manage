@@ -1,4 +1,4 @@
-# Dimanage Backend
+# Dimanage Frontend
 
 Built with NextJs with Tailwind
 
