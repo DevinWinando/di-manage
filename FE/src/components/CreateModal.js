@@ -44,7 +44,6 @@ export default function CreateModal({ currentDirectory, setCurrentDirectory, set
               type="button"
               onClick={() => {
                 document.getElementById("create").close();
-                e.target.reset();
               }}
             >
               Cancel
